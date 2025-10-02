@@ -1,32 +1,9 @@
-import { Download, Code, Zap, Shield, Terminal, Github, Mail } from "lucide-react";
+import { Download, Terminal, Github, Mail, Code, Zap } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
+import { ProgramsList } from "@/components/ProgramsList";
 
 const Index = () => {
-  const programs = [
-    {
-      name: "CyberTools Pro",
-      description: "Advanced automation toolkit with futuristic interface",
-      version: "v2.5.1",
-      size: "45 MB",
-      icon: <Zap className="w-6 h-6" />,
-    },
-    {
-      name: "CodeMatrix",
-      description: "Next-gen code analyzer and optimizer",
-      version: "v1.8.0",
-      size: "32 MB",
-      icon: <Code className="w-6 h-6" />,
-    },
-    {
-      name: "SecureShield",
-      description: "Cybersecurity suite for modern developers",
-      version: "v3.2.0",
-      size: "58 MB",
-      icon: <Shield className="w-6 h-6" />,
-    },
-  ];
-
   const skills = [
     "C++ Development",
     "Python Automation",
@@ -46,7 +23,7 @@ const Index = () => {
           </div>
           
           <h1 className="text-6xl md:text-8xl font-black mb-6 text-gradient">
-            CYBERBIO
+            KAJZ
           </h1>
           
           <p className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-2xl mx-auto">
@@ -131,31 +108,7 @@ const Index = () => {
             <span className="text-gradient">MY PROGRAMS</span>
           </h2>
           
-          <div className="grid md:grid-cols-3 gap-8">
-            {programs.map((program, index) => (
-              <Card
-                key={index}
-                className="glass-card p-6 hover:glow-magenta transition-all duration-300 group"
-              >
-                <div className="text-accent mb-4 group-hover:scale-110 transition-transform">
-                  {program.icon}
-                </div>
-                
-                <h3 className="text-2xl font-bold mb-2">{program.name}</h3>
-                <p className="text-foreground/70 mb-4">{program.description}</p>
-                
-                <div className="flex justify-between text-sm text-muted-foreground mb-6">
-                  <span>{program.version}</span>
-                  <span>{program.size}</span>
-                </div>
-                
-                <Button className="w-full glow-cyan group">
-                  <Download className="mr-2 group-hover:animate-bounce" />
-                  Download
-                </Button>
-              </Card>
-            ))}
-          </div>
+          <ProgramsList />
         </div>
       </section>
 
@@ -186,7 +139,7 @@ const Index = () => {
       {/* Footer */}
       <footer className="py-8 px-4 border-t border-primary/20 relative z-10">
         <div className="max-w-6xl mx-auto text-center text-muted-foreground">
-          <p>© 2025 CyberBio. Crafted with passion in the digital realm.</p>
+          <p>© 2025 Kajz. Crafted with passion in the digital realm.</p>
         </div>
       </footer>
     </div>
