@@ -2,24 +2,14 @@ import { Download, Terminal, Github, Mail, Code, Zap } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { ProgramsList } from "@/components/ProgramsList";
-
 const Index = () => {
-  const skills = [
-    "C++ Development",
-    "Python Automation",
-    "Cybersecurity",
-    "Game Development",
-    "UI/UX Design",
-    "System Architecture",
-  ];
-
-  return (
-    <div className="min-h-screen relative">
+  const skills = ["C++ Development", "Python Automation", "Cybersecurity", "Game Development", "UI/UX Design", "System Architecture"];
+  return <div className="min-h-screen relative">
       {/* Hero Section */}
       <section className="min-h-screen flex items-center justify-center px-4 relative z-10">
         <div className="max-w-6xl mx-auto text-center animate-slide-up">
           <div className="mb-8 inline-block">
-            <Terminal className="w-20 h-20 text-primary animate-glow-pulse mx-auto" />
+            
           </div>
           
           <h1 className="text-6xl md:text-8xl font-black mb-6 text-gradient">
@@ -88,15 +78,11 @@ const Index = () => {
           </h2>
           
           <div className="flex flex-wrap gap-4 justify-center">
-            {skills.map((skill, index) => (
-              <div
-                key={index}
-                className="glass-card px-6 py-3 border-primary/30 hover:border-primary hover:glow-cyan transition-all duration-300 cursor-pointer"
-                style={{ animationDelay: `${index * 0.1}s` }}
-              >
+            {skills.map((skill, index) => <div key={index} className="glass-card px-6 py-3 border-primary/30 hover:border-primary hover:glow-cyan transition-all duration-300 cursor-pointer" style={{
+            animationDelay: `${index * 0.1}s`
+          }}>
                 <span className="text-lg font-semibold">{skill}</span>
-              </div>
-            ))}
+              </div>)}
           </div>
         </div>
       </section>
@@ -142,8 +128,6 @@ const Index = () => {
           <p>© 2025 Kajz. Crafted with passion in the digital realm.</p>
         </div>
       </footer>
-    </div>
-  );
+    </div>;
 };
-
 export default Index;
